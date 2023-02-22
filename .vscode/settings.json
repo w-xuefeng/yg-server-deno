@@ -1,19 +1,19 @@
 {
+  "deno.enable": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
   "cSpell.ignorePaths": [
-    "package-lock.json",
-    "node_modules",
     "vscode-extension",
     ".git/objects",
     ".vscode",
     ".vscode-insiders",
     "**/*/settings.json"
   ],
-  "deno.enable": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
   "cSpell.words": [
     "Youngon",
     "deno"
-  ],
+  ]
 }
