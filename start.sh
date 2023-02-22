@@ -1,1 +1,1 @@
-deno run --allow-net cmd/main.ts
+sh deno-check.sh && deno run --allow-net cmd/main.ts
