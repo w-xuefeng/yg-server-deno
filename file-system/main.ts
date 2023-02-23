@@ -1,5 +1,6 @@
 import { serviceLaunched } from "../shared/log-status.ts";
+import conf from "./configs/const.ts";
 
 export default function fsBoot() {
-  serviceLaunched(() => Promise.resolve(), "fs", 7000);
+  serviceLaunched(() => Promise.resolve(), conf.serverName, conf.port);
 }

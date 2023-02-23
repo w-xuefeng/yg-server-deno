@@ -1,5 +1,5 @@
+import { Router } from "../../shared/deps.ts";
 import { welcome } from "../controllers/index.ts";
-import { Router } from "../deps/oak.ts";
 
 const router = new Router();
 

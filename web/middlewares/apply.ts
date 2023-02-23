@@ -1,4 +1,4 @@
-import { Application, logger } from "../deps/oak.ts";
+import { Application, logger } from "../../shared/deps.ts";
 import modifyHeader from "./modify-header.ts";
 
 export default function useMiddlewares<T extends Application>(app: T) {

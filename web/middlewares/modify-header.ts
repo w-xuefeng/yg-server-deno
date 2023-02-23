@@ -1,4 +1,4 @@
-import { Context } from "../deps/oak.ts";
+import { Context } from "../../shared/deps.ts";
 
 export default function modifyHeader(
   ctx: Context,
