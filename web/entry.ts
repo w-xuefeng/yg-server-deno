@@ -7,8 +7,21 @@ import router from "./routers/index.ts";
 export default async function bootstrap() {
   const app = useMiddlewares(new Application());
   app.use(router.routes());
+
+  const launch = () => {
+    return new Promise<void>((resolve, reject) => {
+      app.addEventListener("listen", () => {
+        resolve();
+      });
+      app.addEventListener("error", (e) => {
+        reject(e.message);
+      });
+      app.listen({ port: SERVER_PORT }).catch(reject);
+    });
+  };
+
   await serviceLaunched(
-    () => app.listen({ port: SERVER_PORT }),
+    launch,
     "web",
     SERVER_PORT,
   );
