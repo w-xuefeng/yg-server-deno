@@ -15,8 +15,8 @@ const DECLARATION = /^\s*(\w+)\s*\=\s*(.*)?\s*$/;
 /**
  * Parse the source of a `.env` file into an object with the variables.
  * @example
- * parse('NAME = "Hari Seldon"\nNICK=Seldon');
- * //=> { NAME: 'Hari Seldon', NICK: 'Seldon' }
+ * parse('NAME = "xxx"\nNICK=xxx');
+ * //=> { NAME: 'xxx', NICK: 'xxx' }
  * @param source - Source of a `.env` file.
  */
 export function parse(source: string): DotenvVariables {
