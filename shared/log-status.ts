@@ -32,6 +32,6 @@ export async function serviceLaunched(
       "red",
       `Service startup failed, error info as follow:`,
     );
-    console.log(colors.gray(error));
+    console.log(error);
   }
 }

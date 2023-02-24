@@ -1,6 +1,6 @@
-import { Context } from "../../shared/deps.ts";
+import { Context } from "../deps.ts";
 
-export default function modifyHeader(
+export function modifyHeader(
   ctx: Context,
   next: () => Promise<unknown>,
 ) {
