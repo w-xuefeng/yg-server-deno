@@ -1,5 +1,6 @@
-import { DataTypes, Model } from "../../shared/deps.ts";
+import { DenoDB } from "../../shared/deps.ts";
 import Role from "./role.ts";
+const { Model, DataTypes } = DenoDB;
 
 export default class User extends Model {
   static table = "user";
