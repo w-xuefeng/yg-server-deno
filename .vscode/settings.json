@@ -12,5 +12,11 @@
     ".vscode-insiders",
     "**/*/settings.json"
   ],
-  "cSpell.words": ["DBNAME", "deno", "middlewares", "Youngon"]
+  "cSpell.words": [
+    "DBNAME",
+    "deno",
+    "middlewares",
+    "stuid",
+    "Youngon"
+  ]
 }
