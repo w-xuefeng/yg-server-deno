@@ -6,7 +6,7 @@ export type PathType<
   V extends VType = 1,
 > = `${P}/v${V}${Path}`;
 
-export class PathHandle<P extends string> {
+export class Path<P extends string> {
   prefix = "/";
   constructor(prefix: P) {
     this.prefix = prefix;
