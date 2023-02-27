@@ -6,12 +6,12 @@ export type PathType<
   V extends VType = 1,
 > = `${P}/v${V}${Path}`;
 
-export class Path<P extends string> {
+export class PathHandle<P extends string> {
   prefix = "/";
   constructor(prefix: P) {
     this.prefix = prefix;
   }
-  u<T extends string, V extends VType = 1>(path: T, version: V = 1 as V) {
+  union<T extends string, V extends VType = 1>(path: T, version: V = 1 as V) {
     return `${this.prefix}/v${version}${path}` as PathType<
       P,
       T,

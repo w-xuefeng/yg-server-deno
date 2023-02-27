@@ -12,9 +12,11 @@ export const gatewayConfig = {
   },
 };
 export const infraConfig = {
+  apiPrefix: "/infra" as const,
   port: env.PORT_INFRA,
 };
 export const fileSystemConfig = {
+  apiPrefix: "/fgw" as const,
   port: env.PORT_FS,
   database: {
     host: env.DB_FS_HOST,
@@ -25,6 +27,7 @@ export const fileSystemConfig = {
   },
 };
 export const userCenterConfig = {
+  apiPrefix: "/uc" as const,
   port: env.PORT_UC,
   database: {
     host: env.DB_UC_HOST,
@@ -35,6 +38,7 @@ export const userCenterConfig = {
   },
 };
 export const webServerConfig = {
+  apiPrefix: "/web" as const,
   port: env.PORT_WEB,
   database: {
     host: env.DB_WEB_HOST,
