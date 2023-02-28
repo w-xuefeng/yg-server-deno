@@ -21,7 +21,7 @@ export default class Position extends Model {
 }
 
 export function builtInPosition() {
-  Position.create([
+  return Position.create([
     { id: 1, name: "站员" },
     { id: 2, name: "实习部长" },
     { id: 3, name: "实习副站长" },

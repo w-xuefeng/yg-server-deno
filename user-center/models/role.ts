@@ -21,7 +21,7 @@ export default class Role extends Model {
 }
 
 export function builtInRole() {
-  Role.create([
+  return Role.create([
     { id: 1, name: "普通用户" },
     { id: 2, name: "实习站员" },
     { id: 3, name: "正式站员" },
