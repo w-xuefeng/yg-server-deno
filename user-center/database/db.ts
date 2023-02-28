@@ -7,4 +7,5 @@ export const db = useMySQL(config.database);
 
 export const linkModel = () => {
   db.link([Role, User]);
+  db.sync();
 };

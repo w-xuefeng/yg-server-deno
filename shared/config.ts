@@ -9,6 +9,7 @@ export const gatewayConfig = {
     username: env.DB_GW_USERNAME,
     password: env.DB_GW_PASSWORD,
     port: Number(env.DB_GW_PORT),
+    charset: "utf8mb4",
   },
 };
 export const infraConfig = {
@@ -24,6 +25,7 @@ export const fileSystemConfig = {
     username: env.DB_FS_USERNAME,
     password: env.DB_FS_PASSWORD,
     port: Number(env.DB_FS_PORT),
+    charset: "utf8mb4",
   },
 };
 export const userCenterConfig = {
@@ -35,6 +37,7 @@ export const userCenterConfig = {
     username: env.DB_UC_USERNAME,
     password: env.DB_UC_PASSWORD,
     port: Number(env.DB_UC_PORT),
+    charset: "utf8mb4",
   },
 };
 export const webServerConfig = {
@@ -46,5 +49,6 @@ export const webServerConfig = {
     username: env.DB_WEB_USERNAME,
     password: env.DB_WEB_PASSWORD,
     port: Number(env.DB_WEB_PORT),
+    charset: "utf8mb4",
   },
 };
