@@ -16,6 +16,7 @@ export default class User extends Model {
     },
     stuid: {
       type: DataTypes.STRING,
+      unique: true,
       allowNull: false,
       comment: "学号/工号",
     },
@@ -33,6 +34,10 @@ export default class User extends Model {
       type: DataTypes.STRING,
       allowNull: false,
       comment: "邮箱",
+    },
+    gender: {
+      type: DataTypes.INTEGER,
+      comment: "性别",
     },
     birthday: {
       type: DataTypes.DATE,
@@ -82,4 +87,12 @@ export default class User extends Model {
     role: 1,
     position: 1,
   };
+
+  static role() {
+    return this.hasOne(Role);
+  }
+
+  static position() {
+    return this.hasOne(Position);
+  }
 }
