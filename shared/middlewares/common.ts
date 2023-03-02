@@ -1,17 +1,44 @@
 import { Context } from "../deps.ts";
 
-export function modifyHeader(
+export async function modifyHeader(
   ctx: Context,
   next: () => Promise<unknown>,
 ) {
   ctx.response.headers.set("X-Powered-By", "Deno");
-  next();
+  await next();
 }
 
-export function json(
+export async function getRequestBody<T>(
+  ctx: Context,
+  next?: () => Promise<unknown>,
+) {
+  await next?.();
+  if (!ctx.request.hasBody) {
+    return {
+      type: "error",
+      value: null,
+    };
+  }
+  try {
+    const result = ctx.request.body();
+    const body = await result.value as T;
+    return {
+      type: result.type,
+      value: body,
+    };
+  } catch (error) {
+    console.log("[GetRequestBody Error]", error);
+    return {
+      type: "error",
+      value: null,
+    };
+  }
+}
+
+export async function json(
   ctx: Context,
   next?: () => Promise<unknown>,
 ) {
   ctx.response.headers.set("Content-Type", "application/json");
-  next?.();
+  await next?.();
 }
