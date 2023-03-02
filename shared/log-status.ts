@@ -1,4 +1,5 @@
-import { colors, dotenv } from "./deps.ts";
+import { env } from "./config.ts";
+import { colors } from "./deps.ts";
 
 export function logServiceStatus(
   service: string,
@@ -8,7 +9,7 @@ export function logServiceStatus(
   const serviceName = service.toUpperCase();
   const time = new Date().toLocaleString();
   console.log(
-    `${colors.cyan(`[${serviceName}]`)}\t${dotenv().DENO_MODE}\t${
+    `${colors.cyan(`[${serviceName}]`)}\t${env.DENO_MODE}\t${
       colors[color](statusMsg)
     }\t\t${colors.gray(time)}`,
   );

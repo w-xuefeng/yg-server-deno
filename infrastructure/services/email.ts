@@ -1,6 +1,5 @@
-import { dotenv, Mailer } from "../../shared/deps.ts";
-
-const env = dotenv();
+import { env } from "../../shared/config.ts";
+import { Mailer } from "../../shared/deps.ts";
 
 export default class EmailService {
   static async send(bodyOptions: Mailer.SendConfig) {

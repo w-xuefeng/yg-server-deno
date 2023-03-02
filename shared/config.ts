@@ -1,6 +1,6 @@
 import { dotenv } from "./deps.ts";
 
-const env = dotenv();
+export const env = dotenv();
 export const gatewayConfig = {
   port: env.PORT_GW,
   database: {
