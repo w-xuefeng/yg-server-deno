@@ -17,7 +17,7 @@ const logger = async (
   const serverName = (ctx.state.serverName || "Server").toLocaleUpperCase();
 
   const log_string = `[${
-    format(new Date(Date.now()), "MM-dd-yyyy hh:mm:ss.SSS")
+    format(new Date(Date.now()), "MM-dd-yyyy HH:mm:ss.SSS")
   }  ${serverName}::logger] ${request.ip} "${request.method} ${request.url.pathname}" ${
     String(status)
   } ${User} ${responseTime}`;

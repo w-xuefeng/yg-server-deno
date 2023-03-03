@@ -1,4 +1,4 @@
-import { Context } from "../deps.ts";
+import { Context, EHttpRsCode, R } from "../deps.ts";
 
 export async function modifyHeader(
   ctx: Context,
@@ -41,4 +41,15 @@ export async function json(
 ) {
   ctx.response.headers.set("Content-Type", "application/json");
   await next?.();
+}
+
+export async function notFound(
+  ctx: Context,
+  next?: () => Promise<unknown>,
+) {
+  await next?.();
+  ctx.response.body = R.fail(
+    EHttpRsCode.REQUEST_NOT_FOUND,
+    `${ctx.request.method} ${ctx.request.url.pathname} not found`,
+  );
 }

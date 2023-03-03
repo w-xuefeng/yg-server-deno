@@ -8,8 +8,10 @@ export default function ucBoot() {
   const state: IAppState = {
     serverName: conf.serverName,
   };
-  const app = createApp<IAppState>({ state });
-  app.use(router.routes());
+  const app = createApp<IAppState>({
+    options: { state },
+    router: router.routes(),
+  });
   serviceLaunched(
     launchFactory(app, { port: conf.port }),
     conf.serverName,
