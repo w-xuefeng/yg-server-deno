@@ -48,6 +48,9 @@ export async function notFound(
   next?: () => Promise<unknown>,
 ) {
   await next?.();
+  if (!ctx.response.writable) {
+    return;
+  }
   ctx.response.body = R.fail(
     EHttpRsCode.REQUEST_NOT_FOUND,
     `${ctx.request.method} ${ctx.request.url.pathname} not found`,

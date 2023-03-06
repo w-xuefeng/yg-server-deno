@@ -13,13 +13,16 @@ export function createApp<T extends State>(
   options?: {
     options?: ApplicationOptions<T, OakTypes.ServerRequest>;
     router?: Middleware;
-    middlewares?: Middleware[];
+    beforeRouterMiddlewares?: Middleware[];
+    afterRouterMiddlewares?: Middleware[];
   },
 ) {
   return useBaseMiddlewares(
     new Application<T>(options?.options),
-    [options?.router]
-      .concat(options?.middlewares)
+    ([] as Middleware[])
+      .concat(options?.beforeRouterMiddlewares || [])
+      .concat(options?.router || [])
+      .concat(options?.afterRouterMiddlewares || [])
       .concat(notFound)
       .filter((e) => !!e),
   );

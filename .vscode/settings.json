@@ -17,6 +17,7 @@
     "deno",
     "middlewares",
     "stuid",
-    "Youngon"
+    "Youngon",
+    "runas"
   ]
 }
