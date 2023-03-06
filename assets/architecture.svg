@@ -1,0 +1,354 @@
+<svg id="SvgjsSvg1358" width="925.78125" height="533.662109375" xmlns="http://www.w3.org/2000/svg" version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
+  <defs id="SvgjsDefs1359">
+    <marker id="SvgjsMarker1374" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1375" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1378" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1379" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1388" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1389" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1392" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1393" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1396" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1397" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1400" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1401" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1404" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1405" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1408" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1409" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1412" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1413" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1426" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1427" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1430" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1431" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1454" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1455" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1458" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1459" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1486" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1487" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1490" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1491" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1528" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1529" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+    <marker id="SvgjsMarker1532" markerWidth="14" markerHeight="10" refX="10" refY="5" viewBox="0 0 14 10" orient="auto"
+      markerUnits="userSpaceOnUse" stroke-dasharray="0,0">
+      <path id="SvgjsPath1533" d="M0,0 L14,5 L0,10 L0,0" fill="#323232" stroke="#323232" stroke-width="1"></path>
+    </marker>
+  </defs>
+  <g id="SvgjsG1360" transform="translate(25.003396739130494,252.340183423913)">
+    <path id="SvgjsPath1361"
+      d="M 9.666666666666666 0L 70.58333333333333 0C 83.47222222222223 0 83.47222222222223 29 70.58333333333333 29L 9.666666666666666 29C -3.222222222222222 29 -3.222222222222222 0 9.666666666666666 0Z"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1362"><text id="SvgjsText1363" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="61px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="3.875" transform="rotate(0)">
+        <tspan id="SvgjsTspan1364" dy="16" x="40.5">
+          <tspan id="SvgjsTspan1365" style="text-decoration:;">Request</tspan>
+        </tspan>
+      </text></g>
+  </g>
+  <g id="SvgjsG1366" transform="translate(165.171875,240.2423573369565)">
+    <path id="SvgjsPath1367" d="M 0 0L 109.75000000000003 0L 109.75000000000003 53.19565217391295L 0 53.19565217391295Z"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1368"><text id="SvgjsText1369" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="90px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="15.972826086956474" transform="rotate(0)">
+        <tspan id="SvgjsTspan1370" dy="16" x="55">
+          <tspan id="SvgjsTspan1371" style="text-decoration:;">Nginx</tspan>
+        </tspan>
+      </text></g>
+  </g>
+  <g id="SvgjsG1372">
+    <path id="SvgjsPath1373"
+      d="M106.2533967391305 266.840183423913L135.21263586956525 266.840183423913L135.21263586956525 266.840183423913L161.571875 266.840183423913"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1374)"></path>
+  </g>
+  <g id="SvgjsG1376">
+    <path id="SvgjsPath1377"
+      d="M275.921875 266.840183423913L304.88111413043475 266.840183423913L304.88111413043475 266.840183423913L331.2403532608695 266.840183423913"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1378)"></path>
+  </g>
+  <g id="SvgjsG1380" transform="translate(586.008831521739,25.008661684782545)">
+    <path id="SvgjsPath1381"
+      d="M 0 4Q 0 0 4 0L 247.1742424242425 0Q 251.1742424242425 0 251.1742424242425 4L 251.1742424242425 36Q 251.1742424242425 40 247.1742424242425 40L 4 40Q 0 40 0 36Z"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1382"><text id="SvgjsText1383" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="232px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="9.375" transform="rotate(0)">
+        <tspan id="SvgjsTspan1384" dy="16" x="126">
+          <tspan id="SvgjsTspan1385" style="text-decoration:;">Infrastructure</tspan>
+        </tspan>
+      </text></g>
+  </g>
+  <g id="SvgjsG1386">
+    <path id="SvgjsPath1387"
+      d="M497.0903532608695 266.840183423913L541.0495923913043 266.840183423913L541.0495923913043 45.008661684782545L582.408831521739 45.008661684782545"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1388)"></path>
+  </g>
+  <g id="SvgjsG1390">
+    <path id="SvgjsPath1391"
+      d="M497.0903532608695 266.840183423913L541.0495923913043 266.840183423913L541.0495923913043 171.3130095108695L582.408831521739 171.3130095108695"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1392)"></path>
+  </g>
+  <g id="SvgjsG1394">
+    <path id="SvgjsPath1395"
+      d="M497.0903532608695 266.840183423913L541.0495923913043 266.840183423913L541.0495923913043 323.8673573369564L582.408831521739 323.8673573369564"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1396)"></path>
+  </g>
+  <g id="SvgjsG1398">
+    <path id="SvgjsPath1399"
+      d="M497.0903532608695 266.840183423913L541.0495923913043 266.840183423913L541.0495923913043 469.2967051630434L582.408831521739 469.2967051630434"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1400)"></path>
+  </g>
+  <g id="SvgjsG1402">
+    <path id="SvgjsPath1403"
+      d="M872.008831521739 469.2967051630434L901.008831521739 469.2967051630434L901.008831521739 323.8673573369564L874.608831521739 323.8673573369564"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1404)"></path>
+  </g>
+  <g id="SvgjsG1406">
+    <path id="SvgjsPath1407"
+      d="M872.008831521739 469.2967051630434L901.008831521739 469.2967051630434L901.008831521739 171.3130095108695L874.608831521739 171.3130095108695"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1408)"></path>
+  </g>
+  <g id="SvgjsG1410">
+    <path id="SvgjsPath1411"
+      d="M872.008831521739 469.2967051630434L901.008831521739 469.2967051630434L901.008831521739 45.008661684782545L840.7830739459813 45.008661684782545"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1412)"></path>
+  </g>
+  <g id="SvgjsG1414" transform="translate(586.008831521739,429.9217051630434)">
+    <path id="SvgjsPath1415" d="M 0 0L 285 0L 285 78.75L 0 78.75L 0 0ZM 20 0L 20 78.75M 265 0L 265 78.75"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1416"><text id="SvgjsText1417" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="245px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="28.75" transform="rotate(0)"></text></g>
+  </g>
+  <g id="SvgjsG1418" transform="translate(619.5946901075977,449.97605298913027)">
+    <path id="SvgjsPath1419"
+      d="M 0 4Q 0 0 4 0L 101.55555555555554 0Q 105.55555555555554 0 105.55555555555554 4L 105.55555555555554 34.641304347826086Q 105.55555555555554 38.641304347826086 101.55555555555554 38.641304347826086L 4 38.641304347826086Q 0 38.641304347826086 0 34.641304347826086Z"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1420"><text id="SvgjsText1421" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="86px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="8.695652173913043" transform="rotate(0)">
+        <tspan id="SvgjsTspan1422" dy="16" x="53">
+          <tspan id="SvgjsTspan1423" style="text-decoration:;">WebServer</tspan>
+        </tspan>
+      </text></g>
+  </g>
+  <g id="SvgjsG1424">
+    <path id="SvgjsPath1425"
+      d="M726.1502456631531 469.2967051630434L762.7078529863854 469.2967051630434L762.7078529863854 469.29670516304327L796.6654603096177 469.29670516304327"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1426)"></path>
+  </g>
+  <g id="SvgjsG1428">
+    <path id="SvgjsPath1429"
+      d="M800.2654603096178 469.29670516304327L762.7078529863854 469.29670516304327L762.7078529863854 469.2967051630434L728.7502456631531 469.2967051630434"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1430)"></path>
+  </g>
+  <g id="SvgjsG1432" transform="translate(586.008831521739,277.6173573369564)">
+    <path id="SvgjsPath1433" d="M 0 0L 285 0L 285 92.5L 0 92.5L 0 0ZM 20 0L 20 92.5M 265 0L 265 92.5"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1434"><text id="SvgjsText1435" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="245px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="35.625" transform="rotate(0)"></text></g>
+  </g>
+  <g id="SvgjsG1436" transform="translate(625.5639916640878,305.8673573369564)">
+    <path id="SvgjsPath1437"
+      d="M 0 4Q 0 0 4 0L 99.9208672549114 0Q 103.9208672549114 0 103.9208672549114 4L 103.9208672549114 36Q 103.9208672549114 40 99.9208672549114 40L 4 40Q 0 40 0 36Z"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1438"><text id="SvgjsText1439" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="84px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="9.375" transform="rotate(0)">
+        <tspan id="SvgjsTspan1440" dy="16" x="52">
+          <tspan id="SvgjsTspan1441" style="text-decoration:;">UserCenter</tspan>
+        </tspan>
+      </text></g>
+  </g>
+  <g id="SvgjsG1442" transform="translate(586.008831521739,124.8130095108695)">
+    <path id="SvgjsPath1443" d="M 0 0L 285 0L 285 93L 0 93L 0 0ZM 20 0L 20 93M 265 0L 265 93" stroke="rgba(33,41,48,1)"
+      stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1444"><text id="SvgjsText1445" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="245px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="35.875" transform="rotate(0)"></text></g>
+  </g>
+  <g id="SvgjsG1446" transform="translate(622.1218452203691,152.3130095108695)">
+    <path id="SvgjsPath1447"
+      d="M 0 4Q 0 0 4 0L 103.36301369863014 0Q 107.36301369863014 0 107.36301369863014 4L 107.36301369863014 36Q 107.36301369863014 40 103.36301369863014 40L 4 40Q 0 40 0 36Z"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1448"><text id="SvgjsText1449" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="88px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="9.375" transform="rotate(0)">
+        <tspan id="SvgjsTspan1450" dy="16" x="54">
+          <tspan id="SvgjsTspan1451" style="text-decoration:;">FileSystem</tspan>
+        </tspan>
+      </text></g>
+  </g>
+  <g id="SvgjsG1452">
+    <path id="SvgjsPath1453"
+      d="M730.4848589189992 172.3130095108695L758.0058970374726 172.3130095108695L758.0058970374726 172.31300951086945L782.9269351559457 172.31300951086945"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1454)"></path>
+  </g>
+  <g id="SvgjsG1456">
+    <path id="SvgjsPath1457"
+      d="M785.5269351559457 172.31300951086945L758.0058970374726 172.31300951086945L758.0058970374726 172.3130095108695L733.0848589189992 172.3130095108695"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1458)"></path>
+  </g>
+  <g id="SvgjsG1460" transform="translate(786.5269351559457,135.43800951086945)">
+    <path id="SvgjsPath1461"
+      d="M 0 8.442689798339265L 0 62.6875C 0 77.4375 50.656138790035584 77.4375 50.656138790035584 62.6875L 50.656138790035584 8.442689798339265C 50.656138790035584 -2.302551763183436 0 -2.302551763183436 0 8.442689798339265ZM 0 8.442689798339265C 0 18.996052046263344 50.656138790035584 18.996052046263344 50.656138790035584 8.442689798339265C 50.656138790035584 18.996052046263344 0 18.996052046263344 0 8.442689798339265"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1462"><text id="SvgjsText1463" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="51px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="-5.625" transform="rotate(0)">
+        <tspan id="SvgjsTspan1464" dy="16" x="25.5">
+          <tspan id="SvgjsTspan1465" style="text-decoration:;"> </tspan>
+        </tspan>
+        <tspan id="SvgjsTspan1466" dy="16" x="25.5">
+          <tspan id="SvgjsTspan1467" style="text-decoration:;"> </tspan>
+        </tspan>
+        <tspan id="SvgjsTspan1468" dy="16" x="25.5">
+          <tspan id="SvgjsTspan1469" style="text-decoration:;">FS</tspan>
+        </tspan>
+        <tspan id="SvgjsTspan1470" dy="16" x="25.5">
+          <tspan id="SvgjsTspan1471" style="text-decoration:;">DB</tspan>
+        </tspan>
+      </text></g>
+  </g>
+  <g id="SvgjsG1472" transform="translate(798.3838315217388,292.8945312499999)">
+    <path id="SvgjsPath1473"
+      d="M 0 7.4375L 0 56.05380434782615C 0 69.24293478260877 44.625 69.24293478260877 44.625 56.05380434782615L 44.625 7.4375C 44.625 -2.028409090909091 0 -2.028409090909091 0 7.4375ZM 0 7.4375C 0 16.734375 44.625 16.734375 44.625 7.4375C 44.625 16.734375 0 16.734375 0 7.4375"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1474"><text id="SvgjsText1475" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="45px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="-8.74673913043475" transform="rotate(0)">
+        <tspan id="SvgjsTspan1476" dy="16" x="22.5">
+          <tspan id="SvgjsTspan1477" style="text-decoration:;"> </tspan>
+        </tspan>
+        <tspan id="SvgjsTspan1478" dy="16" x="22.5">
+          <tspan id="SvgjsTspan1479" style="text-decoration:;"> </tspan>
+        </tspan>
+        <tspan id="SvgjsTspan1480" dy="16" x="22.5">
+          <tspan id="SvgjsTspan1481" style="text-decoration:;">UC</tspan>
+        </tspan>
+        <tspan id="SvgjsTspan1482" dy="16" x="22.5">
+          <tspan id="SvgjsTspan1483" style="text-decoration:;">DB</tspan>
+        </tspan>
+      </text></g>
+  </g>
+  <g id="SvgjsG1484">
+    <path id="SvgjsPath1485"
+      d="M729.4848589189992 325.8673573369564L763.4343452203691 325.8673573369564L763.4343452203691 325.8673573369564L794.7838315217388 325.8673573369564"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1486)"></path>
+  </g>
+  <g id="SvgjsG1488">
+    <path id="SvgjsPath1489"
+      d="M797.3838315217388 325.8673573369564L763.9343452203691 325.8673573369564L763.9343452203691 325.8673573369564L733.0848589189992 325.8673573369564"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1490)"></path>
+  </g>
+  <g id="SvgjsG1492" transform="translate(800.2654603096178,435.0820312499999)">
+    <path id="SvgjsPath1493"
+      d="M 0 6.8102904040404155L 0 58.16494565217385C 0 71.85081521739123 40.86174242424249 71.85081521739123 40.86174242424249 58.16494565217385L 40.86174242424249 6.8102904040404155C 40.86174242424249 -1.8573519283746587 0 -1.8573519283746587 0 6.8102904040404155ZM 0 6.8102904040404155C 0 15.323153409090935 40.86174242424249 15.323153409090935 40.86174242424249 6.8102904040404155C 40.86174242424249 15.323153409090935 0 15.323153409090935 0 6.8102904040404155"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1494"><text id="SvgjsText1495" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="41px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="-7.753260869565246" transform="rotate(0)">
+        <tspan id="SvgjsTspan1496" dy="16" x="20.5">
+          <tspan id="SvgjsTspan1497" style="text-decoration:;"> </tspan>
+        </tspan>
+        <tspan id="SvgjsTspan1498" dy="16" x="20.5">
+          <tspan id="SvgjsTspan1499" style="text-decoration:;"> </tspan>
+        </tspan>
+        <tspan id="SvgjsTspan1500" dy="16" x="20.5">
+          <tspan id="SvgjsTspan1501" style="text-decoration:;">WEB</tspan>
+        </tspan>
+        <tspan id="SvgjsTspan1502" dy="16" x="20.5">
+          <tspan id="SvgjsTspan1503" style="text-decoration:;">DB</tspan>
+        </tspan>
+      </text></g>
+  </g>
+  <g id="SvgjsG1504" transform="translate(334.8403532608695,182.09018342391298)">
+    <path id="SvgjsPath1505"
+      d="M 0 0L 161.25 0L 161.25 169.49999999999994L 0 169.49999999999994L 0 0ZM 20 0L 20 169.49999999999994M 141.25 0L 141.25 169.49999999999994"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1506"><text id="SvgjsText1507" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="122px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="74.12499999999997" transform="rotate(0)"></text></g>
+  </g>
+  <g id="SvgjsG1508" transform="translate(374.97758152173924,197.58859404470573)">
+    <path id="SvgjsPath1509"
+      d="M 0 4Q 0 0 4 0L 79.31249999999983 0Q 83.31249999999983 0 83.31249999999983 4L 83.31249999999983 34.87808526551982Q 83.31249999999983 38.87808526551982 79.31249999999983 38.87808526551982L 4 38.87808526551982Q 0 38.87808526551982 0 34.87808526551982Z"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1510"><text id="SvgjsText1511" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="64px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="8.81404263275991" transform="rotate(0)">
+        <tspan id="SvgjsTspan1512" dy="16" x="42">
+          <tspan id="SvgjsTspan1513" style="text-decoration:;">Gateway</tspan>
+        </tspan>
+      </text></g>
+  </g>
+  <g id="SvgjsG1514" transform="translate(396.18546195652175,274.6950357051395)">
+    <path id="SvgjsPath1515"
+      d="M 0 6.816123188405771L 0 54.48161462228868C 0 67.30081806282719 40.896739130434625 67.30081806282719 40.896739130434625 54.48161462228868L 40.896739130434625 6.816123188405771C 40.896739130434625 -1.8589426877470283 0 -1.8589426877470283 0 6.816123188405771ZM 0 6.816123188405771C 0 15.336277173912984 40.896739130434625 15.336277173912984 40.896739130434625 6.816123188405771C 40.896739130434625 15.336277173912984 0 15.336277173912984 0 6.816123188405771"
+      stroke="rgba(33,41,48,1)" stroke-width="2" fill-opacity="1" fill="#ffffff"></path>
+    <g id="SvgjsG1516"><text id="SvgjsText1517" font-family="微软雅黑" text-anchor="middle" font-size="13px" width="41px"
+        fill="#323232" font-weight="400" align="middle" lineHeight="125%" anchor="middle" family="微软雅黑" size="13px"
+        weight="400" font-style="" opacity="1" y="-9.486593118922972" transform="rotate(0)">
+        <tspan id="SvgjsTspan1518" dy="16" x="20.5">
+          <tspan id="SvgjsTspan1519" style="text-decoration:;"> </tspan>
+        </tspan>
+        <tspan id="SvgjsTspan1520" dy="16" x="20.5">
+          <tspan id="SvgjsTspan1521" style="text-decoration:;"> </tspan>
+        </tspan>
+        <tspan id="SvgjsTspan1522" dy="16" x="20.5">
+          <tspan id="SvgjsTspan1523" style="text-decoration:;">GW</tspan>
+        </tspan>
+        <tspan id="SvgjsTspan1524" dy="16" x="20.5">
+          <tspan id="SvgjsTspan1525" style="text-decoration:;">DB</tspan>
+        </tspan>
+      </text></g>
+  </g>
+  <g id="SvgjsG1526">
+    <path id="SvgjsPath1527"
+      d="M416.633831521739 236.49472717858757L416.633831521739 255.0948814418635L416.633831521739 255.0948814418635L416.633831521739 271.0950357051395"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1528)"></path>
+  </g>
+  <g id="SvgjsG1530">
+    <path id="SvgjsPath1531"
+      d="M416.633831521739 273.6950357051395L416.633831521739 255.58085750768242L416.633831521739 255.58085750768242L416.633831521739 240.06667931022554"
+      stroke="#323232" stroke-width="2" fill="none" marker-end="url(#SvgjsMarker1532)"></path>
+  </g>
+</svg>
