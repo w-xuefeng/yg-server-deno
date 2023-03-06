@@ -1,3 +1,5 @@
+import { existsSync } from "https://deno.land/std@0.104.0/fs/exists.ts";
+
 const args = Deno.args;
 const modeArgsIndex = args.findIndex((arg) => arg === "--mode") + 1;
 const mode = modeArgsIndex ? args[modeArgsIndex] : "dev";
@@ -60,8 +62,18 @@ export interface DotenvOptions {
 export default function dotenv(
   { path = `.env.${mode}` }: DotenvOptions = {},
 ): DotenvVariables {
-  const file = Deno.readFileSync(path);
-  const vars = parse(decoder.decode(file));
+  let localPath = path;
+  let vars = {};
+  if (!path.endsWith(".local")) {
+    localPath = `${path}.local`;
+  }
+
+  if (existsSync(localPath)) {
+    vars = parse(decoder.decode(Deno.readFileSync(localPath)));
+  } else if (existsSync(path)) {
+    vars = parse(decoder.decode(Deno.readFileSync(path)));
+  }
+
   return Object.assign(
     {
       DENO_MODE: mode,
