@@ -18,7 +18,10 @@ export function createApp<T extends State>(
 ) {
   return useBaseMiddlewares(
     new Application<T>(options?.options),
-    [options?.router, notFound].concat(options?.middlewares),
+    [options?.router]
+      .concat(options?.middlewares)
+      .concat(notFound)
+      .filter((e) => !!e),
   );
 }
 
