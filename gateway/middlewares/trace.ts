@@ -5,7 +5,7 @@ import { logTraceId } from "./utils.ts";
 const trace: Middleware = async (ctx, next) => {
   const traceId = ctx.request.headers.get("trace-id") || nanoid();
   ctx.state.traceId = traceId;
-  logTraceId("Trace", traceId);
+  logTraceId("Trace", ctx);
   await next();
 };
 

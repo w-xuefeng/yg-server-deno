@@ -15,6 +15,74 @@ const prefixMap = {
   [webServerConfig.apiPrefix]: webServerConfig.port,
 };
 
+const fetchService = async (
+  ctx: Context,
+  url: string | URL,
+  requestInit?: RequestInit,
+) => {
+  try {
+    const rs = await fetch(url, requestInit);
+    const body = new Uint8Array(await rs.arrayBuffer());
+    rs.headers.forEach((v, k) => {
+      ctx.response.headers.set(k, v);
+    });
+    ctx.response.body = body;
+  } catch (error) {
+    ctx.response.body = R.fail(
+      EHttpRsCode.GATEWAY_EXCEPTION,
+      error?.message || "system",
+    );
+  }
+};
+
+const prepareRequestBody = async (ctx: Context) => {
+  if (!ctx.request.hasBody) {
+    return null;
+  }
+  let body: BodyInit | null = null;
+  const bodyWrapper = ctx.request.body();
+  switch (bodyWrapper.type) {
+    case "undefined":
+      break;
+    case "bytes":
+      body = await bodyWrapper.value;
+      break;
+    case "form":
+      body = await bodyWrapper.value;
+      break;
+    case "form-data":
+      body = await (async () => {
+        const originalFormData = await bodyWrapper.value.read();
+        const formData = new FormData();
+        Object.keys(originalFormData.fields).forEach((k) => {
+          formData.append(k, originalFormData.fields[k]);
+        });
+        originalFormData.files?.forEach((e) => {
+          if (e.content) {
+            formData.append(
+              e.name,
+              new Blob([e.content], { type: e.contentType }),
+              e.filename,
+            );
+          }
+        });
+        return formData;
+      })();
+      break;
+    case "json":
+      body = JSON.stringify(await bodyWrapper.value);
+      break;
+    case "text":
+      body = await bodyWrapper.value;
+      break;
+
+    default:
+      break;
+  }
+
+  return body;
+};
+
 const proxyRouter = async (
   ctx: Context,
 ) => {
@@ -23,76 +91,18 @@ const proxyRouter = async (
   const method = ctx.request.method;
   const headers = new Headers(ctx.request.headers);
   headers.set("trace-id", traceId);
-  let body: BodyInit | null = null;
-  if (ctx.request.hasBody) {
-    const bodyWrapper = ctx.request.body();
-    switch (bodyWrapper.type) {
-      case "undefined":
-        break;
-      case "bytes":
-        body = await bodyWrapper.value;
-        break;
-      case "form":
-        body = await bodyWrapper.value;
-        break;
-      case "form-data":
-        const originalformData = await bodyWrapper.value.read();
-        const formDate = new FormData();
-        Object.keys(originalformData.fields).forEach((k) => {
-          formDate.append(k, originalformData.fields[k]);
-        });
-        originalformData.files?.forEach((e) => {
-          if (e.content) {
-            formDate.append(
-              e.name,
-              new Blob([e.content], { type: e.contentType }),
-              e.filename,
-            );
-          }
-        });
-        body = formDate;
-        break;
-      case "json":
-        body = JSON.stringify(await bodyWrapper.value);
-        break;
-      case "text":
-        body = await bodyWrapper.value;
-        break;
-
-      default:
-        break;
-    }
-  }
-  return fetch(
-    url,
-    Object.assign(body ? { body } : {}, {
-      headers,
-      method,
-    }),
-  ).then((rs) => {
-    const contentType = rs.headers.get("content-type");
-    if (contentType?.includes("application/json")) {
-      return rs.json();
-    }
-    if (contentType?.includes("application/octet-stream")) {
-      return rs.blob();
-    }
-    if (contentType?.startsWith("text/")) {
-      return rs.text();
-    }
-    return rs.json();
-  }).then((rs) => {
-    ctx.response.body = rs;
-  }).catch((error) => {
-    ctx.response.body = R.fail(
-      EHttpRsCode.GATEWAY_EXCEPTION,
-      error?.message || "system",
-    );
-  });
+  const body = await prepareRequestBody(ctx);
+  const requestInit: RequestInit = Object.assign(body ? { body } : {}, {
+    headers,
+    method,
+    credentials: "include",
+    mode: "cors",
+  } as RequestInit);
+  return fetchService(ctx, url, requestInit);
 };
 
-const router: Middleware = async (ctx, next) => {
-  logTraceId("Router", ctx.state.traceId);
+const router: Middleware = (ctx, next) => {
+  logTraceId("Router", ctx);
   const url = new URL(ctx.request.url);
   const prefix = `/${url.pathname.split("/").at(1) || ""}`;
   const port = prefixMap[prefix as keyof typeof prefixMap];

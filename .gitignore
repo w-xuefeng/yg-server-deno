@@ -6,6 +6,7 @@ logs
 
 # Editor directories and files
 !.vscode
+.vscode/launch.json
 .idea
 .DS_Store
 *.suo
