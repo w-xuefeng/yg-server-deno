@@ -1,5 +1,6 @@
 import { env } from "./config.ts";
 import { colors } from "./deps.ts";
+import { sLog } from "./write-log.ts";
 
 export function logServiceStatus(
   service: string,
@@ -13,6 +14,7 @@ export function logServiceStatus(
       colors[color](statusMsg)
     }\t\t${colors.gray(time)}`,
   );
+  sLog(`${(`[${serviceName}]`)}\t${env.DENO_MODE}\t${statusMsg}\t\t${time}`);
 }
 
 export async function serviceLaunched(
@@ -34,5 +36,6 @@ export async function serviceLaunched(
       `Service startup failed, error info as follow:`,
     );
     console.log(error);
+    error?.message && sLog(error.message);
   }
 }

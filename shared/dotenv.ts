@@ -1,4 +1,4 @@
-import { existsSync } from "https://deno.land/std@0.104.0/fs/exists.ts";
+import { existsSync } from "./deps.ts";
 
 const args = Deno.args;
 const modeArgsIndex = args.findIndex((arg) => arg === "--mode") + 1;

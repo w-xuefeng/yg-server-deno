@@ -1,5 +1,6 @@
 import { colors, type Context, format } from "../deps.ts";
 import { type IAppState } from "../types.ts";
+import { sLog } from "../write-log.ts";
 const { cyan, green, red, yellow } = colors;
 
 const X_RESPONSE_TIME = "X-Response-Time";
@@ -31,6 +32,8 @@ const logger = async (
     : status >= 200
     ? console.log(`${green(log_string)}`) // green
     : console.log(`${red(log_string)}`);
+
+  sLog(log_string);
 };
 
 /** Response time calculator that also adds response time header. */

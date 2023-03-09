@@ -6,5 +6,6 @@ export * as DenoDB from "https://raw.githubusercontent.com/jerlam06/denodb/maste
 export * as Mailer from "https://deno.land/x/denomailer@1.6.0/mod.ts";
 export { type ResponseBody } from "https://deno.land/x/oak@v11.1.0/response.ts";
 export { type ModelSchema } from "https://raw.githubusercontent.com/jerlam06/denodb/master/lib/model.ts";
+export { existsSync } from "https://deno.land/std@0.104.0/fs/exists.ts";
 export { format } from "https://deno.land/std@0.177.0/datetime/mod.ts";
 export { default as dotenv } from "./dotenv.ts";
