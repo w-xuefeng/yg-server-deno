@@ -1,4 +1,5 @@
 import { Context, EHttpRsCode, R } from "../shared/deps.ts";
+import { sLog } from "../shared/write-log.ts";
 
 export async function fetchService(
   ctx: Context,
@@ -40,44 +41,49 @@ export async function prepareRequestBody(ctx: Context) {
     return null;
   }
   let body: BodyInit | null = null;
-  const bodyWrapper = ctx.request.body();
-  switch (bodyWrapper.type) {
-    case "undefined":
-      break;
-    case "bytes":
-      body = await bodyWrapper.value;
-      break;
-    case "form":
-      body = await bodyWrapper.value;
-      break;
-    case "form-data":
-      body = await (async () => {
-        const originalFormData = await bodyWrapper.value.read();
-        const formData = new FormData();
-        Object.keys(originalFormData.fields).forEach((k) => {
-          formData.append(k, originalFormData.fields[k]);
-        });
-        originalFormData.files?.forEach((e) => {
-          if (e.content) {
-            formData.append(
-              e.name,
-              new Blob([e.content], { type: e.contentType }),
-              e.filename,
-            );
-          }
-        });
-        return formData;
-      })();
-      break;
-    case "json":
-      body = JSON.stringify(await bodyWrapper.value);
-      break;
-    case "text":
-      body = await bodyWrapper.value;
-      break;
+  try {
+    const bodyWrapper = ctx.request.body();
+    switch (bodyWrapper.type) {
+      case "undefined":
+        break;
+      case "bytes":
+        body = await bodyWrapper.value;
+        break;
+      case "form":
+        body = await bodyWrapper.value;
+        break;
+      case "form-data":
+        body = await (async () => {
+          const originalFormData = await bodyWrapper.value.read();
+          const formData = new FormData();
+          Object.keys(originalFormData.fields).forEach((k) => {
+            formData.append(k, originalFormData.fields[k]);
+          });
+          originalFormData.files?.forEach((e) => {
+            if (e.content) {
+              formData.append(
+                e.name,
+                new Blob([e.content], { type: e.contentType }),
+                e.filename,
+              );
+            }
+          });
+          return formData;
+        })();
+        break;
+      case "json":
+        body = JSON.stringify(await bodyWrapper.value);
+        break;
+      case "text":
+        body = await bodyWrapper.value;
+        break;
 
-    default:
-      break;
+      default:
+        break;
+    }
+  } catch (error) {
+    console.log(`[Gateway GetRequestBody Error]`, error);
+    sLog(`[Gateway GetRequestBody Error] ${error}`);
   }
 
   return body;
