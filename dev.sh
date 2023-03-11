@@ -1,1 +1,1 @@
-sh deno-check.sh && deno run --allow-net --allow-read --allow-write --allow-env --watch cmd/main.ts --mode dev
+sh deno-check.sh && deno run -A --watch cmd/main.ts --mode dev

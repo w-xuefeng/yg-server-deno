@@ -33,9 +33,7 @@ export async function serviceLaunched(
     logServiceStatus(
       service,
       "red",
-      `Service startup failed, error info as follow:`,
+      `Service startup failed, error info as follow: ${error?.message}`,
     );
-    console.log(error);
-    error?.message && sLog(error.message);
   }
 }
