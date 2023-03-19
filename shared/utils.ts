@@ -1,3 +1,6 @@
+import { existsSync } from "./deps.ts";
+import { sLog } from "./write-log.ts";
+
 export type VType = number;
 
 export type PathType<
@@ -106,4 +109,40 @@ export class YGStorage {
   public static clearSession() {
     this.clearStorage(sessionStorage);
   }
+}
+
+export function dbLockChecker(serverName: string) {
+  return existsSync(`.${serverName.toLocaleLowerCase()}.db.lock`);
+}
+
+export function dbLockContent(serverName: string) {
+  return Deno.readTextFileSync(`.${serverName.toLocaleLowerCase()}.db.lock`);
+}
+
+export async function dbLock(serverName: string) {
+  await Deno.writeTextFile(
+    `.${serverName.toLocaleLowerCase()}.db.lock`,
+    `Database has been synced at ${new Date().toLocaleString()}`,
+    { create: true },
+  );
+}
+
+export async function dbSync(
+  serverName: string,
+  doSyncFunction: () => Promise<void> | void,
+) {
+  if (dbLockChecker(serverName)) {
+    const log = dbLockContent(serverName);
+    console.log(log);
+    sLog(log, serverName);
+    return Deno.exit();
+  }
+  await doSyncFunction();
+  await dbLock(serverName);
+  const log = `Database synchronization succeeded at ${
+    new Date().toLocaleString()
+  }！`;
+  console.log(log);
+  sLog(log, serverName);
+  Deno.exit();
 }
