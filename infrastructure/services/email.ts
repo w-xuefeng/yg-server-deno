@@ -7,7 +7,7 @@ export default class EmailService {
       connection: {
         hostname: env.INFRA_MAIL_HOST,
         port: Number(env.INFRA_MAIL_PORT),
-        tls: true,
+        tls: env.DENO_MODE === "prod",
         auth: {
           username: env.INFRA_MAIL_USERNAME,
           password: env.INFRA_MAIL_PASSWORD,
@@ -15,6 +15,7 @@ export default class EmailService {
       },
       debug: {
         noStartTLS: env.DENO_MODE === "dev",
+        allowUnsecure: env.DENO_MODE === "dev",
       },
     };
     const client = new Mailer.SMTPClient(clientOptions);
