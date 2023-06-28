@@ -9,7 +9,6 @@ import {
 import { logTraceId } from "./utils.ts";
 import {
   fetchService,
-  prepareRequestBody,
   prepareRequestURL,
 } from "../utils.ts";
 
@@ -20,18 +19,14 @@ const prefixMap = {
   [webServerConfig.apiPrefix]: webServerConfig.port,
 };
 
-const proxyRouter = async (ctx: Context, url: string | URL) => {
+const proxyRouter = (ctx: Context, url: string | URL) => {
   const traceId = ctx.state.traceId;
-  const method = ctx.request.method;
   const headers = new Headers(ctx.request.headers);
   headers.set("trace-id", traceId);
-  const body = await prepareRequestBody(ctx);
-  const requestInit: RequestInit = Object.assign(body ? { body } : {}, {
-    headers,
-    method,
-    credentials: "include",
-    mode: "cors",
-  } as RequestInit);
+  const requestInit = new Request(
+    url,
+    Object.assign({}, ctx.request.originalRequest, { url, headers }),
+  );
   return fetchService(ctx, url, requestInit);
 };
 
