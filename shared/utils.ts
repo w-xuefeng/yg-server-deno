@@ -1,4 +1,10 @@
-import { existsSync } from "./deps.ts";
+import {
+  Context,
+  existsSync,
+  IPaginationParams,
+  OakHelpers,
+  RouterContext,
+} from "./deps.ts";
 import { sLog } from "./write-log.ts";
 
 export type VType = number;
@@ -145,4 +151,34 @@ export async function dbSync(
   console.log(log);
   sLog(log, serverName);
   Deno.exit();
+}
+
+export function calcPages(totalCount: number, pageSize: number) {
+  if (totalCount === 0) {
+    return 0;
+  }
+  if (totalCount <= pageSize) {
+    return 1;
+  }
+  return Math.ceil(totalCount / pageSize);
+}
+
+export function getPaginationQueries<T = Record<string, string>>(
+  ctx: Context | RouterContext<string>,
+  options?: {
+    asMap?: boolean;
+    mergeParams?: boolean;
+  },
+) {
+  const queries = OakHelpers.getQuery(
+    ctx,
+    Object.assign({ mergeParams: true }, options),
+  ) as unknown as IPaginationParams & T;
+  if (queries.pageNumber) {
+    queries.pageNumber = Number(queries.pageNumber);
+  }
+  if (queries.pageSize) {
+    queries.pageSize = Number(queries.pageSize);
+  }
+  return queries;
 }

@@ -3,6 +3,7 @@ import { createApp, launchFactory } from "../shared/app.ts";
 import { serviceLaunched } from "../shared/log-status.ts";
 import router from "./routers/index.ts";
 import conf from "./configs/const.ts";
+import "./database/db.ts";
 
 export default function ucBoot() {
   const state: IAppState = {

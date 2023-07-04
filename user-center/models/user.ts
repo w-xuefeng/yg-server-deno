@@ -1,7 +1,25 @@
 import { DenoDB } from "../../shared/deps.ts";
 import Role from "./role.ts";
 import Position from "./position.ts";
+import { ITimestamp } from "../../shared/types.ts";
 const { Model, DataTypes } = DenoDB;
+
+export interface IUser extends ITimestamp {
+  id: number;
+  stuid: number;
+  password: string;
+  name: string;
+  email: string;
+  gender: number;
+  birthday?: string;
+  college?: string;
+  major?: string;
+  wxId?: string;
+  qqId?: string;
+  pushId?: string;
+  role: number;
+  position: number;
+}
 
 export default class User extends Model {
   static table = "user";
