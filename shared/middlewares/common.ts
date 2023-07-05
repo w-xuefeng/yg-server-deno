@@ -35,12 +35,16 @@ export async function getRequestBody<T>(
   }
 }
 
-export async function json(
+export async function json<T>(
   ctx: Context,
+  body?: T,
   next?: () => Promise<unknown>,
 ) {
-  ctx.response.headers.set("Content-Type", "application/json");
+  ctx.response.headers.set("Content-Type", "application/json; charset=UTF-8");
   await next?.();
+  if (body) {
+    ctx.response.body = body;
+  }
 }
 
 export async function notFound(
