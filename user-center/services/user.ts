@@ -21,8 +21,9 @@ export default class UserService {
     const { pageSize, pageNumber, ...rest } = options;
     const offset = (pageNumber - 1) * pageNumber;
     const condition = filterEmptyField(rest);
+    const userFields = Object.keys(User.fields).filter((e) => e !== "password");
     const list = (
-      await User.where(condition)
+      await User.select(...userFields).where(condition)
         .offset(offset)
         .limit(pageSize)
         .all()
