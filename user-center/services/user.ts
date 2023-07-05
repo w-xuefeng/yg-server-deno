@@ -1,4 +1,5 @@
 import { z } from "../../shared/deps.ts";
+import { filterEmptyField } from "../../shared/utils.ts";
 import { ZPaginationParams } from "../../shared/zod.ts";
 import User, { IUser } from "../models/user.ts";
 
@@ -19,13 +20,14 @@ export default class UserService {
   }> {
     const { pageSize, pageNumber, ...rest } = options;
     const offset = (pageNumber - 1) * pageNumber;
+    const condition = filterEmptyField(rest);
     const list = (
-      await User.where(rest)
+      await User.where(condition)
         .offset(offset)
         .limit(pageSize)
         .all()
     ) as unknown as IUser[];
-    const totalCount = await User.where(rest).count();
+    const totalCount = await User.where(condition).count();
     return {
       totalCount,
       list,

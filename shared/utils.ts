@@ -182,3 +182,28 @@ export function getPaginationQueries<T = Record<string, string>>(
   }
   return queries;
 }
+
+// deno-lint-ignore no-explicit-any
+export function filterEmptyField<T extends Record<string, any>>(
+  // deno-lint-ignore no-explicit-any
+  data?: Record<string, any>,
+  deep = false,
+  emptyArray = ["", void 0, null],
+) {
+  if (!data) {
+    return {} as T;
+  }
+  return Object.keys(data).reduce((res, key) => {
+    if (
+      data[key] &&
+      typeof data[key] === "object" &&
+      !Array.isArray(data[key]) &&
+      deep
+    ) {
+      res[key as keyof T] = filterEmptyField(data[key]);
+    } else if (!emptyArray.includes(data[key])) {
+      res[key as keyof T] = data[key];
+    }
+    return res;
+  }, {} as T);
+}
