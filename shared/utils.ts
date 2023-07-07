@@ -163,6 +163,19 @@ export function calcPages(totalCount: number, pageSize: number) {
   return Math.ceil(totalCount / pageSize);
 }
 
+export function mapPaginationQueries<T>(
+  queries: Record<string, string | undefined | null>,
+) {
+  const nextQuery = structuredClone(queries) as T & IPaginationParams;
+  if (queries.pageNumber) {
+    nextQuery.pageNumber = Number(queries.pageNumber);
+  }
+  if (queries.pageSize) {
+    nextQuery.pageSize = Number(queries.pageSize);
+  }
+  return nextQuery;
+}
+
 export function getPaginationQueries<T = Record<string, string>>(
   ctx: Context | RouterContext<string>,
   options?: {
@@ -173,14 +186,8 @@ export function getPaginationQueries<T = Record<string, string>>(
   const queries = OakHelpers.getQuery(
     ctx,
     Object.assign({ mergeParams: true }, options),
-  ) as unknown as IPaginationParams & T;
-  if (queries.pageNumber) {
-    queries.pageNumber = Number(queries.pageNumber);
-  }
-  if (queries.pageSize) {
-    queries.pageSize = Number(queries.pageSize);
-  }
-  return queries;
+  ) as unknown as Record<string, string> & T;
+  return mapPaginationQueries<T>(queries);
 }
 
 // deno-lint-ignore no-explicit-any
