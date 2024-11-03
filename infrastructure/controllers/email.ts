@@ -23,7 +23,7 @@ export const sendEmail: RouterMiddleware<InfraPath<"/email/send">> = async (
     console.log("[SendEmailError]", error);
     ctx.response.body = R.fail(
       EHttpRsCode.SYSTEM_INTERNAL_EXCEPTION,
-      error?.message || "send email error",
+      (error as Error)?.message || "send email error",
     );
   }
 };

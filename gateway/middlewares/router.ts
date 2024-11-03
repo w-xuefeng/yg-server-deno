@@ -7,10 +7,7 @@ import {
   webServerConfig,
 } from "../../shared/config.ts";
 import { logTraceId } from "./utils.ts";
-import {
-  fetchService,
-  prepareRequestURL,
-} from "../utils.ts";
+import { fetchService, prepareRequestURL } from "../utils.ts";
 
 const prefixMap = {
   [fileSystemConfig.apiPrefix]: fileSystemConfig.port,
